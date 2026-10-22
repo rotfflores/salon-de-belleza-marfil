@@ -1,0 +1,50 @@
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+      <!-- Fondo de la portada.
+           Celular (< 600 px): foto vertical original.
+           Tableta (600–959 px): versión ancha de la foto.
+           Escritorio (≥ 960 px): la foto en tres franjas (espejo · pared · accesorios); la pared central
+           se estira para cubrir cualquier ancho sin recortar el espejo ni los accesorios. -->
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__frame" data-parallax>
+          <picture class="hero__photo">
+            <source media="(min-width: 960px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <source type="image/webp" media="(min-width: 600px)"
+                    srcset="img/fondo-ancho-1280.webp 1280w, img/fondo-ancho-1920.webp 1920w" sizes="100vw">
+            <source media="(min-width: 600px)"
+                    srcset="img/fondo-ancho-1280.jpg 1280w, img/fondo-ancho-1920.jpg 1920w" sizes="100vw">
+            <source type="image/webp"
+                    srcset="img/fondo-vertical-480.webp 480w, img/fondo-vertical-720.webp 720w, img/fondo-vertical-941.webp 941w"
+                    sizes="100vw">
+            <img class="hero__img"
+                 src="img/fondo-vertical-720.jpg"
+                 srcset="img/fondo-vertical-480.jpg 480w, img/fondo-vertical-720.jpg 720w, img/fondo-vertical-941.jpg 941w"
+                 sizes="100vw" width="941" height="1672"
+                 alt="" fetchpriority="high" decoding="async">
+          </picture>
+          <div class="hero__slices">
+            <img src="img/fondo-izquierda.webp" width="140" height="1552" alt="" loading="lazy" decoding="async">
+            <img class="hero__slice-wall" src="img/fondo-centro.webp" width="450" height="1552" alt="" loading="lazy" decoding="async">
+            <img src="img/fondo-derecha.webp" width="351" height="1552" alt="" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow">Un espacio dedicado a ti</p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__line"><span class="hero__line-inner">Tu momento.</span></span>
+          <span class="hero__line hero__line--accent"><span class="hero__line-inner">Tu estilo.</span></span>
+        </h1>
+        <p class="hero__lead reveal" style="--d: 720ms">Descubre nuestros servicios de cabello y uñas, encuentra tu próxima inspiración y reserva un momento para ti.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary reveal" style="--d: 830ms" href="#contacto" rel="noopener" data-whatsapp>
+            Solicitar cita
+            <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn--ghost reveal" style="--d: 910ms" href="servicios.html">Explorar servicios</a>
+        </div>
+        <p class="hero__note">Conoce los servicios, consulta los precios y elige tu próximo look.</p>
+      </div>
+
+      <p class="hero__tag">Cabello <span aria-hidden="true">·</span> Uñas <span aria-hidden="true">·</span> Belleza</p>
+    </section>

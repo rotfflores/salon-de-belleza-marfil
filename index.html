@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cabello, uñas y belleza · Marfil</title>
+  <meta name="description" content="Descubre Marfil: una selección de servicios de cabello, uñas y cejas, estilos para inspirarte y toda la información para preparar tu visita.">
+  <meta name="theme-color" content="#F7F4EF">
+
+  <link rel="preload" as="image" type="image/webp" media="(max-width: 599px)"
+        imagesrcset="img/fondo-vertical-480.webp 480w, img/fondo-vertical-720.webp 720w, img/fondo-vertical-941.webp 941w"
+        imagesizes="100vw">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+
+  <script src="config.js"></script>
+  <script src="contact.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="gallery.js" defer></script>
+</head>
+<body class="page-home" data-page-title="Cabello, uñas y belleza">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand__name" data-salon-name>Marfil</span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav__list"><li><a class="nav__link" href="index.html" aria-current="page">Inicio</a></li>
+<li><a class="nav__link" href="servicios.html">Servicios</a></li>
+<li><a class="nav__link" href="galeria.html">Galería</a></li>
+<li><a class="nav__link" href="nuestro-salon.html">Nuestro salón</a></li>
+<li><a class="nav__link" href="contacto.html">Contacto</a></li></ul>
+      </nav>
+
+      <a class="btn btn--primary btn--sm site-header__cta" href="contacto.html#reservas" rel="noopener" data-whatsapp>Solicitar cita</a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+        <span class="menu-toggle__label">Menú</span>
+        <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden data-menu>
+      <nav aria-label="Principal (móvil)">
+        <ul class="mobile-menu__list"><li><a class="mobile-menu__link" href="index.html" aria-current="page">Inicio</a></li>
+<li><a class="mobile-menu__link" href="servicios.html">Servicios</a></li>
+<li><a class="mobile-menu__link" href="galeria.html">Galería</a></li>
+<li><a class="mobile-menu__link" href="nuestro-salon.html">Nuestro salón</a></li>
+<li><a class="mobile-menu__link" href="contacto.html">Contacto</a></li></ul>
+      </nav>
+      <a class="btn btn--primary btn--block" href="contacto.html#reservas" rel="noopener" data-whatsapp>Solicitar cita</a>
+    </div>
+  </header>
+  <main id="contenido" tabindex="-1">
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+      <!-- Fondo de la portada.
+           Celular (< 600 px): foto vertical original.
+           Tableta (600–959 px): versión ancha de la foto.
+           Escritorio (≥ 960 px): la foto en tres franjas (espejo · pared · accesorios); la pared central
+           se estira para cubrir cualquier ancho sin recortar el espejo ni los accesorios. -->
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__frame" data-parallax>
+          <picture class="hero__photo">
+            <source media="(min-width: 960px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <source type="image/webp" media="(min-width: 600px)"
+                    srcset="img/fondo-ancho-1280.webp 1280w, img/fondo-ancho-1920.webp 1920w" sizes="100vw">
+            <source media="(min-width: 600px)"
+                    srcset="img/fondo-ancho-1280.jpg 1280w, img/fondo-ancho-1920.jpg 1920w" sizes="100vw">
+            <source type="image/webp"
+                    srcset="img/fondo-vertical-480.webp 480w, img/fondo-vertical-720.webp 720w, img/fondo-vertical-941.webp 941w"
+                    sizes="100vw">
+            <img class="hero__img"
+                 src="img/fondo-vertical-720.jpg"
+                 srcset="img/fondo-vertical-480.jpg 480w, img/fondo-vertical-720.jpg 720w, img/fondo-vertical-941.jpg 941w"
+                 sizes="100vw" width="941" height="1672"
+                 alt="" fetchpriority="high" decoding="async">
+          </picture>
+          <div class="hero__slices">
+            <img src="img/fondo-izquierda.webp" width="140" height="1552" alt="" loading="lazy" decoding="async">
+            <img class="hero__slice-wall" src="img/fondo-centro.webp" width="450" height="1552" alt="" loading="lazy" decoding="async">
+            <img src="img/fondo-derecha.webp" width="351" height="1552" alt="" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow">Un espacio dedicado a ti</p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__line"><span class="hero__line-inner">Tu momento.</span></span>
+          <span class="hero__line hero__line--accent"><span class="hero__line-inner">Tu estilo.</span></span>
+        </h1>
+        <p class="hero__lead reveal" style="--d: 720ms">Descubre nuestros servicios de cabello y uñas, encuentra tu próxima inspiración y reserva un momento para ti.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary reveal" style="--d: 830ms" href="contacto.html#reservas" rel="noopener" data-whatsapp>
+            Solicitar cita
+            <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn--ghost reveal" style="--d: 910ms" href="servicios.html">Explorar servicios</a>
+        </div>
+        <p class="hero__note">Conoce los servicios, consulta los precios y elige tu próximo look.</p>
+      </div>
+
+      <p class="hero__tag">Cabello <span aria-hidden="true">·</span> Uñas <span aria-hidden="true">·</span> Belleza</p>
+    </section>
+<section class="services services--preview" id="servicios" aria-labelledby="services-title" data-services>
+      <!-- Servicios y precios. Después de editar este archivo ejecuta `node build-site.js`.
+           Cada servicio es un bloque li.svc: nombre, precio, descripción, "Qué incluye", duración y
+           data-service (el nombre que va en el mensaje de WhatsApp). data-category lo conecta con su filtro y su
+           grupo; los contadores se calculan solos. En precios "desde" deja la etiqueta Desde y la nota del importe final.
+           data-featured marca los 3 servicios que aparecen en Inicio. La etiqueta "Más solicitado" es opcional.
+           Lo que está entre las marcas solo-pagina y /solo-pagina aparece solo en servicios.html. -->
+      <!-- Fondo: los utensilios de img/servicios/ (recortados de fondo-original.png) quedan en las esquinas,
+           como en la foto, y se adaptan a cualquier alto y ancho de la sección. -->
+      <div class="sv-backdrop" aria-hidden="true" data-backdrop>
+        <span class="sv-prop sv-prop--bowl" data-prop="top"><img src="img/servicios/cuenco.webp" width="292" height="297" alt="" decoding="async"></span>
+        <span class="sv-prop sv-prop--clip" data-prop="top"><img src="img/servicios/pinza.webp" width="200" height="195" alt="" decoding="async"></span>
+        <span class="sv-prop sv-prop--tray" data-prop="bottom"><img src="img/servicios/bandeja.webp" width="380" height="477" alt="" loading="lazy" decoding="async"></span>
+      </div>
+      <div class="services__inner">
+        <header class="services__header">
+          <div>
+            <p class="services__eyebrow sv-reveal">Servicios</p>
+            <h2 class="services__title" id="services-title"><span class="services__title-line"><span>Encuentra lo que</span></span> <em class="services__title-line"><span>va contigo.</span></em></h2>
+          </div>
+          <p class="services__lead sv-reveal" style="--d: 160ms">Tres maneras de regalarte una pausa. Descubre una selección de nuestros servicios y encuentra tu próximo momento de cuidado.</p>
+        </header>
+
+        
+
+        <ul class="services__list" data-services-list>
+<li class="svc" data-category="cabello" data-featured>
+                <p class="svc__category">Cabello</p>
+                <div class="svc__head">
+                  <h3 class="svc__name">Corte y estilo</h3>
+                  <span class="svc__leader" aria-hidden="true"></span>
+                  <p class="svc__price">$350 <abbr title="pesos mexicanos">MXN</abbr></p>
+                </div>
+                <div class="svc__body">
+                  <p class="svc__badge">Más solicitado</p>
+                  <p class="svc__desc">Corte con acabado y peinado sencillo.</p>
+                </div>
+                <div class="svc__foot">
+                  <p class="svc__duration"><svg class="svc__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M8 4.75V8l2.25 1.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aprox. 60 min</span></p>
+                  <a class="btn btn--line btn--sm svc__cta" href="contacto.html#reservas" rel="noopener" data-service="Corte y estilo" aria-label="Elegir servicio: Corte y estilo">Elegir servicio <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+              </li>
+<li class="svc" data-category="unas" data-featured>
+                <p class="svc__category">Uñas</p>
+                <div class="svc__head">
+                  <h3 class="svc__name">Manicure con gel</h3>
+                  <span class="svc__leader" aria-hidden="true"></span>
+                  <p class="svc__price">$300 <abbr title="pesos mexicanos">MXN</abbr></p>
+                </div>
+                <div class="svc__body">
+                  <p class="svc__badge">Más solicitado</p>
+                  <p class="svc__desc">Preparación de uñas y aplicación de color en gel.</p>
+                </div>
+                <div class="svc__foot">
+                  <p class="svc__duration"><svg class="svc__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M8 4.75V8l2.25 1.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aprox. 60 min</span></p>
+                  <a class="btn btn--line btn--sm svc__cta" href="contacto.html#reservas" rel="noopener" data-service="Manicure con gel" aria-label="Elegir servicio: Manicure con gel">Elegir servicio <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+              </li>
+<li class="svc" data-category="cejas" data-featured>
+                <p class="svc__category">Cejas</p>
+                <div class="svc__head">
+                  <h3 class="svc__name">Diseño de cejas</h3>
+                  <span class="svc__leader" aria-hidden="true"></span>
+                  <p class="svc__price">$180 <abbr title="pesos mexicanos">MXN</abbr></p>
+                </div>
+                <div class="svc__body">
+                  <p class="svc__desc">Definición de la forma mediante depilación.</p>
+                </div>
+                <div class="svc__foot">
+                  <p class="svc__duration"><svg class="svc__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M8 4.75V8l2.25 1.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aprox. 30 min</span></p>
+                  <a class="btn btn--line btn--sm svc__cta" href="contacto.html#reservas" rel="noopener" data-service="Diseño de cejas" aria-label="Elegir servicio: Diseño de cejas">Elegir servicio <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+              </li>
+</ul>
+
+        <p class="services__fineprint">Duraciones aproximadas. Precios en pesos mexicanos; te confirmamos el importe final antes de tu visita.</p>
+
+        <div class="section-action"><a class="btn btn--line" href="servicios.html">Ver todos los servicios <span aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+      </div>
+    </section>
+
+<section class="work-gallery work-gallery--preview" id="galeria" aria-labelledby="gallery-title" data-gallery>
+      <!-- Fondo: fotos impresas y luz de ventana de img/galeria/fondo/ (recortadas de fondo-original.png). Las fotos
+           quedan en las esquinas, como en el original, y se adaptan a cualquier alto y ancho de la sección. -->
+      <div class="gw-backdrop" aria-hidden="true" data-backdrop>
+        <span class="gw-light gw-light--top" data-prop="light"><img src="img/galeria/fondo/luz-arriba.webp" width="105" height="301" alt="" decoding="async"></span>
+        <span class="gw-light gw-light--bottom" data-prop="light"><img src="img/galeria/fondo/luz-abajo.webp" width="109" height="195" alt="" loading="lazy" decoding="async"></span>
+        <span class="gw-prop gw-prop--top" data-prop="top"><img src="img/galeria/fondo/fotos-arriba.webp" width="427" height="685" alt="" decoding="async"></span>
+        <span class="gw-prop gw-prop--bottom" data-prop="bottom"><img src="img/galeria/fondo/fotos-abajo.webp" width="469" height="626" alt="" loading="lazy" decoding="async"></span>
+      </div>
+      <div class="work-gallery__inner">
+        <header class="services__header">
+          <div>
+            <p class="services__eyebrow">Galería</p>
+            <h2 class="services__title" id="gallery-title">Inspírate para<br><em>tu próxima visita.</em></h2>
+          </div>
+          <p class="services__lead">Explora estilos, colores y detalles para encontrar la inspiración que quieres llevar a tu próxima cita.</p>
+        </header>
+        <ul class="gallery-grid is-all" id="gallery-grid" aria-label="Estilos de inspiración">
+<li class="gallery-card" data-featured data-gallery-category="cabello">
+            <a class="gallery-card__link" href="img/galeria/color-1400.webp" data-gallery-open data-related-service="Balayage" data-related-price="Desde $1,800 MXN" data-title="Rubio luminoso" data-label="Cabello" aria-label="Ampliar: Rubio luminoso · Cabello">
+              <span class="gallery-card__image"><img src="img/galeria/color-560.webp" srcset="img/galeria/color-560.webp 560w, img/galeria/color-900.webp 900w, img/galeria/color-1400.webp 1400w" sizes="(max-width: 959px) 90vw, 58vw" width="1400" height="2100" alt="Cabello largo visto de espaldas, con raíces oscuras y ondas en tonos rubios" loading="lazy" decoding="async"></span>
+              <span class="gallery-card__caption"><span><span class="gallery-card__category">Cabello</span><span class="gallery-card__title">Rubio luminoso</span><span class="gallery-card__service">Balayage · Desde $1,800</span></span><span class="gallery-card__expand" aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+            </a>
+          </li>
+<li class="gallery-card" data-featured data-gallery-category="unas">
+            <a class="gallery-card__link" href="img/galeria/frances-1400.webp" data-gallery-open data-related-service="Manicure con gel" data-related-price="$300 MXN" data-title="Francés sutil" data-label="Uñas" aria-label="Ampliar: Francés sutil · Uñas">
+              <span class="gallery-card__image"><img src="img/galeria/frances-560.webp" srcset="img/galeria/frances-560.webp 560w, img/galeria/frances-900.webp 900w, img/galeria/frances-1400.webp 1400w" sizes="(max-width: 479px) 90vw, (max-width: 959px) 45vw, 29vw" width="1400" height="2100" alt="Manicure francés con base rosa, puntas blancas y un delicado detalle floral" loading="lazy" decoding="async"></span>
+              <span class="gallery-card__caption"><span><span class="gallery-card__category">Uñas</span><span class="gallery-card__title">Francés sutil</span><span class="gallery-card__service">Manicure con gel · $300</span></span><span class="gallery-card__expand" aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+            </a>
+          </li>
+<li class="gallery-card" data-featured data-gallery-category="cejas">
+            <a class="gallery-card__link" href="img/galeria/cejas-1400.webp" data-gallery-open data-related-service="Diseño de cejas" data-related-price="$180 MXN" data-title="Arco definido" data-label="Cejas" aria-label="Ampliar: Arco definido · Cejas">
+              <span class="gallery-card__image"><img src="img/galeria/cejas-560.webp" srcset="img/galeria/cejas-560.webp 560w, img/galeria/cejas-900.webp 900w, img/galeria/cejas-1400.webp 1400w" sizes="(max-width: 479px) 90vw, (max-width: 959px) 45vw, 29vw" width="1400" height="2100" alt="Primer plano del diseño de una ceja con pinzas, siguiendo su arco natural" loading="lazy" decoding="async"></span>
+              <span class="gallery-card__caption"><span><span class="gallery-card__category">Cejas</span><span class="gallery-card__title">Arco definido</span><span class="gallery-card__service">Diseño de cejas · $180</span></span><span class="gallery-card__expand" aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+            </a>
+          </li>
+<li class="gallery-card" data-featured data-gallery-category="pestanas">
+            <a class="gallery-card__link" href="img/galeria/pestanas-1400.webp" data-gallery-open data-related-service="Lifting de pestañas" data-related-price="$450 MXN" data-title="Mirada realzada" data-label="Pestañas" aria-label="Ampliar: Mirada realzada · Pestañas">
+              <span class="gallery-card__image"><img src="img/galeria/pestanas-560.webp" srcset="img/galeria/pestanas-560.webp 560w, img/galeria/pestanas-900.webp 900w, img/galeria/pestanas-1400.webp 1400w" sizes="(max-width: 959px) 90vw, 29vw" width="1400" height="1866" alt="Primer plano de un ojo verde con pestañas curvadas y definidas" loading="lazy" decoding="async"></span>
+              <span class="gallery-card__caption"><span><span class="gallery-card__category">Pestañas</span><span class="gallery-card__title">Mirada realzada</span><span class="gallery-card__service">Lifting de pestañas · $450</span></span><span class="gallery-card__expand" aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+            </a>
+          </li>
+</ul>
+        <p class="work-gallery__note">Imágenes de inspiración para esta demostración</p>
+        <div class="section-action"><a class="btn btn--line" href="galeria.html">Explorar galería <span aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+        <div class="work-gallery__divider" aria-hidden="true"><span data-salon-name>Marfil</span></div>
+      </div>
+      <dialog class="gallery-viewer" aria-labelledby="gallery-viewer-title" aria-describedby="gallery-viewer-meta" data-gallery-viewer>
+        <div class="gallery-viewer__shell">
+          <div class="gallery-viewer__top"><span class="gallery-viewer__brand">Galería · <span data-salon-name>Marfil</span></span><span class="gallery-viewer__count" aria-hidden="true" data-gallery-count></span><button class="gallery-viewer__control gallery-viewer__close" type="button" data-gallery-close autofocus aria-label="Cerrar visor">Cerrar <span aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M4.5 4.5l7 7M11.5 4.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button></div>
+          <div class="gallery-viewer__stage">
+            <img class="gallery-viewer__image" data-gallery-image alt="" decoding="async">
+            <p class="gallery-viewer__error" role="status" data-gallery-error hidden>No se pudo cargar esta imagen. Puedes volver a abrirla o explorar el siguiente estilo.</p>
+          </div>
+          <div class="gallery-viewer__bottom">
+            <div class="gallery-viewer__caption" aria-live="polite" aria-atomic="true"><p id="gallery-viewer-meta" data-gallery-meta></p><h3 id="gallery-viewer-title" data-gallery-title></h3><p class="gallery-viewer__service" data-gallery-service hidden></p></div>
+            <div class="gallery-viewer__navigation"><button class="gallery-viewer__control" type="button" data-gallery-prev aria-label="Fotografía anterior"><span aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M13 8H4M7.5 4.5 4 8l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="gallery-viewer__control" type="button" data-gallery-next aria-label="Fotografía siguiente"><span aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button></div>
+            <a class="btn gallery-viewer__consult" href="contacto.html#reservas" rel="noopener noreferrer" data-gallery-consult>Consultar este estilo <span aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          </div>
+        </div>
+      </dialog>
+    </section>
+    <!--
+      Nuestro salón. Textos ilustrativos de demostración: cámbialos por la historia y los datos reales del salón.
+      Lo que está entre las marcas "solo-pagina" aparece solo en nuestro-salon.html; Inicio muestra la presentación y los tres pilares.
+    -->
+    <section class="salon salon--preview" id="nuestro-salon" aria-labelledby="salon-title" data-salon>
+      <div class="salon__inner">
+        <div class="salon__intro">
+          <figure class="salon__arch sl-reveal">
+            <span class="salon__arch-frame"><img src="img/salon/interior-real-1200.webp" srcset="img/salon/interior-real-600.webp 600w, img/salon/interior-real-1200.webp 1200w, img/salon/interior-real-1800.webp 1800w" sizes="(max-width: 767px) 120vw, 44rem" width="1800" height="1190" alt="Interior de un salón de belleza real, con sillones negros, espejos iluminados y luz natural" style="object-position: 30% center" loading="lazy" decoding="async" data-salon-parallax></span>
+            <figcaption>Fotografía de referencia · Interior de un salón real.</figcaption>
+          </figure>
+          <div class="salon__text">
+            <p class="salon__eyebrow sl-reveal">Nuestro salón</p>
+            <h2 class="salon__title sl-reveal" id="salon-title">Un espacio <em>dedicado a ti.</em></h2>
+            <p class="salon__lead sl-reveal">En Marfil creemos que cuidarte también es darte una pausa. Por eso pensamos un salón tranquilo, luminoso y sin prisas, donde cada servicio empieza escuchándote.</p>
+            <ul class="salon__pillars" aria-label="Lo que nos mueve">
+              <li class="pillar sl-item">
+                <span class="pillar__icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path pathLength="1" d="M4 5.5h16A1.5 1.5 0 0 1 21.5 7v8.5A1.5 1.5 0 0 1 20 17H10.5L6 20.5V17H4a1.5 1.5 0 0 1-1.5-1.5V7A1.5 1.5 0 0 1 4 5.5Z"/><path pathLength="1" d="M8 11.25h.01M12 11.25h.01M16 11.25h.01"/></svg></span>
+                <div><h4>Escuchar primero</h4><p>Cada cita empieza con una conversación: lo que te gusta, tu rutina y el tiempo que quieres dedicar a mantenerlo.</p></div>
+              </li>
+              <li class="pillar sl-item">
+                <span class="pillar__icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path pathLength="1" d="M11 3c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7Z"/><path pathLength="1" d="M19 15.5c.25 1.6.9 2.25 2.5 2.5-1.6.25-2.25.9-2.5 2.5-.25-1.6-.9-2.25-2.5-2.5 1.6-.25 2.25-.9 2.5-2.5Z"/></svg></span>
+                <div><h4>Cuidar el detalle</h4><p>Técnica cuidadosa, acabados limpios y recomendaciones honestas, aunque eso signifique sugerirte algo más sencillo.</p></div>
+              </li>
+              <li class="pillar sl-item">
+                <span class="pillar__icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path pathLength="1" d="M4.5 10h12v4.5a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5V10Z"/><path pathLength="1" d="M16.5 11.5h1.25a2.25 2.25 0 0 1 0 4.5H16"/><path pathLength="1" d="M8.5 3.5c-.8.9-.8 1.9 0 2.75M12.5 3.5c-.8.9-.8 1.9 0 2.75"/></svg></span>
+                <div><h4>Darte una pausa</h4><p>Agendamos con el tiempo suficiente para que no haya prisas. Tu visita también es un momento para descansar.</p></div>
+              </li>
+            </ul>
+            <div class="section-action sl-reveal"><a class="btn btn--line" href="nuestro-salon.html">Conocer el salón <span aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="home-contact" aria-labelledby="home-contact-title"><div><p class="page-eyebrow">Te esperamos</p><h2 id="home-contact-title">Tu próximo momento de cuidado empieza aquí.</h2></div><div class="home-contact__actions"><a class="btn btn--primary" href="contacto.html#reservas" data-whatsapp>Solicitar cita</a><a class="text-link" href="contacto.html">Ubicación y contacto <span aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></section>
+<!-- Continuidad: incorporar aquí futuras secciones del proyecto. -->
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer__main">
+      <div><a class="brand" href="index.html" aria-label="Marfil · Inicio"><span class="brand__name" data-salon-name>Marfil</span></a><p>Cabello, uñas y un momento para ti.</p></div>
+      <nav aria-label="Pie de página"><ul class="footer-nav"><li><a class="footer-nav__link" href="index.html" aria-current="page">Inicio</a></li>
+<li><a class="footer-nav__link" href="servicios.html">Servicios</a></li>
+<li><a class="footer-nav__link" href="galeria.html">Galería</a></li>
+<li><a class="footer-nav__link" href="nuestro-salon.html">Nuestro salón</a></li>
+<li><a class="footer-nav__link" href="contacto.html">Contacto</a></li></ul></nav>
+      <div class="site-footer__contact"><p data-contact-address>Información por confirmar</p><a data-contact-whatsapp data-contact-prefix="WhatsApp · " aria-disabled="true">WhatsApp · Información por confirmar</a><a data-contact-phone aria-disabled="true">Teléfono · Información por confirmar</a><a data-contact-instagram data-contact-prefix="Instagram · " aria-disabled="true">Instagram · Información por confirmar</a><a data-contact-facebook data-contact-prefix="Facebook · " aria-disabled="true">Facebook · Información por confirmar</a></div>
+    </div>
+    <div class="site-footer__bottom"><span>© <span data-year>2026</span> <span data-salon-name>Marfil</span></span><span>Un espacio dedicado a ti.</span></div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+    <section class="contact-page" id="contacto" aria-labelledby="contact-title">
+      <header class="page-heading">
+        <p class="page-eyebrow">Contacto</p>
+        <h1 id="contact-title">Será un gusto<br><em>recibirte.</em></h1>
+        <p class="page-heading__lead">Consulta nuestros horarios, encuentra cómo llegar y escríbenos para preparar tu próxima visita.</p>
+        <a class="btn btn--primary page-heading__cta" href="#reservas">Agendar cita en línea <span aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M8 3v9M4.5 8.5 8 12l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </header>
+      <div class="contact-layout">
+        <div class="contact-details">
+          <div class="contact-detail"><span class="contact-detail__number">01</span><div><h2>Encuéntranos</h2><address data-contact-address>Información por confirmar</address><p class="contact-detail__label">Referencias</p><p data-contact-references>Información por confirmar</p></div></div>
+          <div class="contact-detail"><span class="contact-detail__number">02</span><div><h2>Tu próximo momento</h2><div data-contact-hours><p>Información por confirmar</p></div></div></div>
+          <div class="contact-detail"><span class="contact-detail__number">03</span><div><h2>Hablemos</h2><dl class="contact-channels"><div><dt>WhatsApp</dt><dd><a data-contact-whatsapp aria-disabled="true">Información por confirmar</a></dd></div><div><dt>Teléfono</dt><dd><a data-contact-phone aria-disabled="true">Información por confirmar</a></dd></div><div><dt>Instagram</dt><dd><a data-contact-instagram aria-disabled="true">Información por confirmar</a></dd></div><div><dt>Facebook</dt><dd><a data-contact-facebook aria-disabled="true">Información por confirmar</a></dd></div></dl></div></div>
+        </div>
+        <div class="contact-map">
+          <div class="contact-map__placeholder" data-map-placeholder><svg width="48" height="56" viewBox="0 0 48 56" fill="none" aria-hidden="true"><path d="M24 52S5 34 5 21a19 19 0 1 1 38 0c0 13-19 31-19 31Z" stroke="currentColor" stroke-width="1.2"/><circle cx="24" cy="21" r="6" stroke="currentColor" stroke-width="1.2"/></svg><span class="brand__name" data-salon-name>Marfil</span><p>Un espacio para ti.</p><small>Ubicación · Información por confirmar</small></div>
+          <iframe data-contact-map title="Ubicación del salón" loading="lazy" referrerpolicy="no-referrer" hidden></iframe>
+          <div class="contact-map__caption"><span>Tu visita, a un paso.</span><a class="text-link" data-directions hidden>Cómo llegar <span aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+        </div>
+      </div>
+      <!--
+        Sistema de citas (booking.js). El catálogo se genera desde content/services.html al construir el sitio;
+        el horario y la nota de demostración se configuran en config.js (booking).
+      -->
+      <section class="booking" id="reservas" aria-labelledby="booking-title" data-booking>
+        <!-- servicios-reserva -->
+        <header class="booking__head">
+          <div>
+            <p class="page-eyebrow">Reserva en línea</p>
+            <h2 id="booking-title">Agenda tu <em>cita.</em></h2>
+            <p class="booking__lead">Elige tu servicio, el día y la hora que mejor te acomoden. En menos de un minuto apartas tu lugar.</p>
+          </div>
+          <ol class="bk-steps" style="--progress: 0" data-booking-steps>
+            <li class="bk-steps__item is-current"><button type="button" data-goto="1" aria-current="step"><span class="bk-steps__dot"><span>1</span><svg viewBox="0 0 16 16" focusable="false"><path d="M4 8.5 6.8 11 12 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="bk-steps__label">Servicio</span></button></li>
+            <li class="bk-steps__item"><button type="button" data-goto="2" disabled><span class="bk-steps__dot"><span>2</span><svg viewBox="0 0 16 16" focusable="false"><path d="M4 8.5 6.8 11 12 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="bk-steps__label">Fecha y hora</span></button></li>
+            <li class="bk-steps__item"><button type="button" data-goto="3" disabled><span class="bk-steps__dot"><span>3</span><svg viewBox="0 0 16 16" focusable="false"><path d="M4 8.5 6.8 11 12 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="bk-steps__label">Tus datos</span></button></li>
+            <li class="bk-steps__item"><button type="button" data-goto="4" disabled><span class="bk-steps__dot"><span>4</span><svg viewBox="0 0 16 16" focusable="false"><path d="M4 8.5 6.8 11 12 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="bk-steps__label">Confirmar</span></button></li>
+          </ol>
+        </header>
+
+        <div class="bk-existing" role="status" hidden data-booking-existing></div>
+
+        <div class="booking__layout">
+          <div class="bk-stage" data-booking-stage>
+            <form class="bk-form" novalidate data-booking-form>
+              <fieldset class="bk-step" data-step="1">
+                <legend tabindex="-1">¿Qué te gustaría hacerte?</legend>
+                <p class="bk-step__hint">Puedes elegir hasta tres servicios para la misma visita.</p>
+                <div class="bk-chips" role="group" aria-label="Filtrar por área" data-booking-cats></div>
+                <ul class="bk-services" data-booking-services></ul>
+                <p class="bk-error" role="alert" data-error="1"></p>
+              </fieldset>
+
+              <fieldset class="bk-step" data-step="2" hidden>
+                <legend tabindex="-1">Elige el día y la hora</legend>
+                <div class="bk-datetime">
+                  <div class="bk-cal">
+                    <div class="bk-cal__head">
+                      <button type="button" class="bk-cal__nav" data-cal="-1" aria-label="Mes anterior"><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M13 8H4M7.5 4.5 4 8l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                      <p class="bk-cal__title" aria-live="polite" data-cal-title></p>
+                      <button type="button" class="bk-cal__nav" data-cal="1" aria-label="Mes siguiente"><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                    </div>
+                    <div class="bk-cal__weekdays" aria-hidden="true"><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span></div>
+                    <div class="bk-cal__viewport"><div class="bk-cal__grid" data-cal-grid></div></div>
+                    <ul class="bk-cal__legend" aria-label="Disponibilidad">
+                      <li><i class="is-open"></i>Disponible</li><li><i class="is-few"></i>Pocos lugares</li><li><i class="is-full"></i>Sin lugares</li>
+                    </ul>
+                  </div>
+                  <div class="bk-slots" data-booking-slots>
+                    <p class="bk-slots__title" data-slots-title>Elige un día para ver los horarios.</p>
+                    <div class="bk-slots__groups" data-slots-groups></div>
+                    <p class="bk-slots__range" aria-live="polite" data-slots-range></p>
+                  </div>
+                </div>
+                <p class="bk-error" role="alert" data-error="2"></p>
+              </fieldset>
+
+              <fieldset class="bk-step" data-step="3" hidden>
+                <legend tabindex="-1">Cuéntanos de ti</legend>
+                <div class="bk-fields">
+                  <div class="bk-field bk-field--wide">
+                    <label for="bk-name">Nombre completo</label>
+                    <input id="bk-name" name="name" type="text" autocomplete="name" required maxlength="80" aria-describedby="bk-name-error">
+                    <p class="bk-field__error" id="bk-name-error"></p>
+                  </div>
+                  <div class="bk-field">
+                    <label for="bk-phone">WhatsApp</label>
+                    <input id="bk-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" required placeholder="10 dígitos" maxlength="16" aria-describedby="bk-phone-error">
+                    <p class="bk-field__error" id="bk-phone-error"></p>
+                  </div>
+                  <div class="bk-field">
+                    <label for="bk-email">Correo <span class="bk-field__optional">(opcional)</span></label>
+                    <input id="bk-email" name="email" type="email" autocomplete="email" maxlength="120" aria-describedby="bk-email-error">
+                    <p class="bk-field__error" id="bk-email-error"></p>
+                  </div>
+                  <div class="bk-field bk-field--wide" role="radiogroup" aria-labelledby="bk-first-label">
+                    <p class="bk-field__label" id="bk-first-label">¿Es tu primera visita?</p>
+                    <div class="bk-pills">
+                      <label class="bk-pill"><input type="radio" name="first" value="Sí"><span>Sí, es la primera</span></label>
+                      <label class="bk-pill"><input type="radio" name="first" value="No"><span>Ya los conozco</span></label>
+                    </div>
+                  </div>
+                  <div class="bk-field bk-field--wide">
+                    <label for="bk-notes">Comentarios <span class="bk-field__optional">(opcional)</span></label>
+                    <textarea id="bk-notes" name="notes" rows="3" maxlength="300" placeholder="Por ejemplo: el tono que te gustaría o si traes una foto de referencia." aria-describedby="bk-notes-count"></textarea>
+                    <p class="bk-field__count" id="bk-notes-count" data-notes-count>0 / 300</p>
+                  </div>
+                  <label class="bk-check bk-field--wide"><input type="checkbox" name="reminder" checked><span>Quiero un recordatorio por WhatsApp un día antes.</span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="bk-step" data-step="4" hidden>
+                <legend tabindex="-1">Revisa y confirma</legend>
+                <div class="bk-review" data-booking-review></div>
+                <label class="bk-check"><input type="checkbox" name="policy" aria-describedby="bk-policy-error"><span>Si no puedo asistir, avisaré con al menos 24 horas de anticipación.</span></label>
+                <p class="bk-field__error" id="bk-policy-error"></p>
+              </fieldset>
+
+              <div class="bk-nav" data-booking-nav>
+                <button type="button" class="bk-nav__back" data-back hidden><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M13 8H4M7.5 4.5 4 8l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Atrás</span></button>
+                <p class="bk-nav__info" data-nav-info aria-hidden="true"></p>
+                <button type="submit" class="btn btn--primary bk-nav__next" data-next><span data-next-label>Continuar</span><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </div>
+            </form>
+
+            <div class="bk-done" hidden data-booking-done tabindex="-1"></div>
+          </div>
+
+          <aside class="bk-summary" aria-labelledby="bk-summary-title" data-booking-summary>
+            <p class="bk-summary__eyebrow">Resumen</p>
+            <h3 id="bk-summary-title">Tu cita</h3>
+            <div data-summary-body></div>
+          </aside>
+        </div>
+        <p class="bk-live visually-hidden" aria-live="polite" data-booking-live></p>
+        <p class="bk-demo" data-booking-demo hidden>Sistema de citas de demostración: la disponibilidad es simulada y la cita se confirma por WhatsApp.</p>
+      </section>
+    </section>

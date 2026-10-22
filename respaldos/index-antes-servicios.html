@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marfil · Cabello, uñas y belleza</title>
+  <meta name="description" content="Marfil, un espacio para tu estilo en Ciudad de México. Cortes, color, manicure y maquillaje con atención personalizada. Sitio de demostración.">
+  <meta name="theme-color" content="#F7F4EF">
+
+  <link rel="preload" as="image" type="image/webp" media="(max-width: 599px)"
+        imagesrcset="img/fondo-vertical-480.webp 480w, img/fondo-vertical-720.webp 720w, img/fondo-vertical-941.webp 941w"
+        imagesizes="100vw">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+
+  <script src="config.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
+
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand__name" data-salon-name>Marfil</span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#inicio" aria-current="page">Inicio</a></li>
+          <li><a class="nav__link" href="#servicios">Servicios</a></li>
+          <li><a class="nav__link" href="#galeria">Galería</a></li>
+          <li><a class="nav__link" href="#nuestro-salon">Nuestro salón</a></li>
+          <li><a class="nav__link" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--primary btn--sm site-header__cta" href="#contacto" rel="noopener" data-whatsapp>Solicitar cita</a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+        <span class="menu-toggle__label">Menú</span>
+        <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden data-menu>
+      <nav aria-label="Principal (móvil)">
+        <ul class="mobile-menu__list">
+          <li><a class="mobile-menu__link" href="#inicio" aria-current="page">Inicio</a></li>
+          <li><a class="mobile-menu__link" href="#servicios">Servicios</a></li>
+          <li><a class="mobile-menu__link" href="#galeria">Galería</a></li>
+          <li><a class="mobile-menu__link" href="#nuestro-salon">Nuestro salón</a></li>
+          <li><a class="mobile-menu__link" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary btn--block" href="#contacto" rel="noopener" data-whatsapp>Solicitar cita</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <!-- Fondo de la portada.
+           Celular (< 600 px): foto vertical original.
+           Tableta (600–959 px): versión ancha de la foto.
+           Escritorio (≥ 960 px): la foto en tres franjas (espejo · pared · accesorios); la pared central
+           se estira para cubrir cualquier ancho sin recortar el espejo ni los accesorios. -->
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__frame" data-parallax>
+          <picture class="hero__photo">
+            <source media="(min-width: 960px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <source type="image/webp" media="(min-width: 600px)"
+                    srcset="img/fondo-ancho-1280.webp 1280w, img/fondo-ancho-1920.webp 1920w" sizes="100vw">
+            <source media="(min-width: 600px)"
+                    srcset="img/fondo-ancho-1280.jpg 1280w, img/fondo-ancho-1920.jpg 1920w" sizes="100vw">
+            <source type="image/webp"
+                    srcset="img/fondo-vertical-480.webp 480w, img/fondo-vertical-720.webp 720w, img/fondo-vertical-941.webp 941w"
+                    sizes="100vw">
+            <img class="hero__img"
+                 src="img/fondo-vertical-720.jpg"
+                 srcset="img/fondo-vertical-480.jpg 480w, img/fondo-vertical-720.jpg 720w, img/fondo-vertical-941.jpg 941w"
+                 sizes="100vw" width="941" height="1672"
+                 alt="" fetchpriority="high" decoding="async">
+          </picture>
+          <div class="hero__slices">
+            <img src="img/fondo-izquierda.webp" width="140" height="1552" alt="" loading="lazy" decoding="async">
+            <img class="hero__slice-wall" src="img/fondo-centro.webp" width="450" height="1552" alt="" loading="lazy" decoding="async">
+            <img src="img/fondo-derecha.webp" width="351" height="1552" alt="" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow">Un espacio dedicado a ti</p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__line"><span class="hero__line-inner">Tu momento.</span></span>
+          <span class="hero__line hero__line--accent"><span class="hero__line-inner">Tu estilo.</span></span>
+        </h1>
+        <p class="hero__lead reveal" style="--d: 720ms">Descubre nuestros servicios de cabello y uñas, encuentra tu próxima inspiración y reserva un momento para ti.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary reveal" style="--d: 830ms" href="#contacto" rel="noopener" data-whatsapp>
+            Solicitar cita
+            <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn--ghost reveal" style="--d: 910ms" href="#servicios">Explorar servicios</a>
+        </div>
+        <p class="hero__note">Conoce los servicios, consulta los precios y elige tu próximo look.</p>
+      </div>
+
+      <p class="hero__tag">Cabello <span aria-hidden="true">·</span> Uñas <span aria-hidden="true">·</span> Belleza</p>
+    </section>
+
+    <section class="section" id="servicios" aria-labelledby="services-title">
+      <div class="section__heading">
+        <div><p class="eyebrow">01 / Servicios</p><h2 id="services-title">Pequeños rituales.<br><em>Grandes cambios.</em></h2></div>
+        <p>Un corte que te favorece, un color que te ilumina, unas manos que hablan de ti. Encuentra tu próximo momento Marfil.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service"><span class="service__number">01</span><h3>Corte &amp; estilo</h3><p>Asesoría, lavado, corte personalizado y secado para darle movimiento a tu cabello.</p><div class="service__detail"><span>Desde $450 MXN</span><span>60 min</span></div></article>
+        <article class="service"><span class="service__number">02</span><h3>Color &amp; balayage</h3><p>Reflejos suaves, tonos luminosos y un diseño de color pensado para ti. Incluye diagnóstico.</p><div class="service__detail"><span>Desde $1,650 MXN</span><span>180 min</span></div></article>
+        <article class="service"><span class="service__number">03</span><h3>Ritual de hidratación</h3><p>Limpieza, mascarilla nutritiva y masaje capilar para un cabello suave y lleno de brillo.</p><div class="service__detail"><span>Desde $550 MXN</span><span>45 min</span></div></article>
+        <article class="service"><span class="service__number">04</span><h3>Manicure en gel</h3><p>Forma, cuidado de cutícula y esmaltado en gel en tu tono favorito. El detalle que completa tu look.</p><div class="service__detail"><span>Desde $350 MXN</span><span>60 min</span></div></article>
+        <article class="service"><span class="service__number">05</span><h3>Pedicure spa</h3><p>Baño relajante, exfoliación, cuidado de uñas y esmalte tradicional para consentir tus pies.</p><div class="service__detail"><span>Desde $420 MXN</span><span>60 min</span></div></article>
+        <article class="service"><span class="service__number">06</span><h3>Maquillaje social</h3><p>Piel luminosa y un acabado a tu medida para acompañarte en tus ocasiones especiales.</p><div class="service__detail"><span>Desde $850 MXN</span><span>75 min</span></div></article>
+      </div>
+      <p class="section__note">Precios en pesos mexicanos. Color y tratamientos varían según largo y cantidad de cabello; confirmamos tu cotización antes de comenzar.</p>
+    </section>
+
+    <section class="section section--sand" id="galeria" aria-labelledby="gallery-title">
+      <div class="section__heading">
+        <div><p class="eyebrow">02 / Inspiración</p><h2 id="gallery-title">La belleza está<br><em>en los detalles.</em></h2></div>
+        <p>Texturas, tonos y pequeños acentos para imaginar tu siguiente look. Fotografías de referencia para nuestra galería de inspiración.</p>
+      </div>
+      <div class="gallery">
+        <figure><img src="img/galeria-cabello.jpg" alt="Estilista secando y dando forma al cabello de una clienta" width="800" height="534" loading="lazy" decoding="async"><figcaption><span>Cabello con movimiento</span><small>Corte &amp; estilo</small></figcaption></figure>
+        <figure><img src="img/galeria-unas.jpg" alt="Manicure con esmalte negro y diseño en tonos carey" width="800" height="1200" loading="lazy" decoding="async"><figcaption><span>Un acento de personalidad</span><small>Manicure &amp; diseño</small></figcaption></figure>
+        <figure><img src="img/galeria-maquillaje.jpg" alt="Selección de maquillaje en tonos cálidos y naturales" width="800" height="523" loading="lazy" decoding="async"><figcaption><span>Tu luz natural</span><small>Maquillaje &amp; belleza</small></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section about" id="nuestro-salon" aria-labelledby="about-title">
+      <div class="about__visual"><img src="img/fondo-vertical-720.webp" alt="Espejo y accesorios de belleza sobre un fondo cálido en tonos marfil" width="720" height="1279" loading="lazy" decoding="async"></div>
+      <div class="about__copy"><p class="eyebrow">03 / Nuestro salón</p><h2 id="about-title">Un respiro.<br><em>Un espacio para ti.</em></h2>
+        <p>Marfil nació en 2020 de una idea sencilla: que ir al salón se sintiera como regalarte una pausa. Un lugar cálido, sin prisas y con tiempo para escucharte.</p>
+        <p>Somos un pequeño equipo que disfruta cuidar cada detalle, desde la primera conversación hasta el último toque de tu peinado. Nos inspiran la belleza natural y los estilos que se sienten tuyos.</p>
+        <div class="team"><p><strong>Valeria Montes</strong><span>Dirección creativa &amp; color</span></p><p><strong>Camila Ríos</strong><span>Uñas &amp; cuidado de manos</span></p><p><strong>Renata Solís</strong><span>Maquillaje &amp; peinado</span></p></div>
+        <a class="text-link" href="#contacto">Planea tu visita <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="section contact" id="contacto" aria-labelledby="contact-title">
+      <div class="section__heading"><div><p class="eyebrow">04 / Te esperamos</p><h2 id="contact-title">Haz espacio<br><em>para ti.</em></h2></div><p>Cuéntanos qué tienes en mente. Te ayudamos a elegir el servicio y a encontrar el momento ideal para tu visita.</p></div>
+      <div class="contact-grid">
+        <div><h3>Encuéntranos</h3><address>Calle Magnolia 128, local 3<br>Col. Jardines del Alba<br>Ciudad de México, C. P. 00000</address><p class="section__note">Dirección ficticia para esta demostración.</p></div>
+        <div><h3>Tu próximo momento</h3><dl class="hours"><div><dt>Lunes a viernes</dt><dd>10:00–19:00</dd></div><div><dt>Sábado</dt><dd>09:00–17:00</dd></div><div><dt>Domingo</dt><dd>Cerrado</dd></div></dl><p class="section__note">Atención con cita previa.</p></div>
+        <div><h3>Hablemos</h3><p>WhatsApp: +52 55 0000 0000<br>hola@marfil.example</p><p class="section__note">Contacto de ejemplo. Las reservas aún no están habilitadas.</p></div>
+      </div>
+      <div class="visit-notes"><p><strong>Antes de tu visita</strong> Llega 10 minutos antes y trae tus imágenes de inspiración.</p><p><strong>Si cambian tus planes</strong> Agradecemos que nos avises con 24 horas de anticipación.</p><p><strong>Formas de pago</strong> Efectivo, tarjeta y transferencia.</p></div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="#inicio"><span class="brand__name" data-salon-name>Marfil</span></a><p>Cabello, uñas y un momento para ti.</p><small>Demo · Información comercial, equipo y datos de contacto ficticios. Fotografías de referencia: Unsplash.</small></footer>
+</body>
+</html>

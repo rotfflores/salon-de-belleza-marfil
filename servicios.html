@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Servicios y precios · Marfil</title>
+  <meta name="description" content="Explora los servicios de Marfil: cabello, uñas, cejas y pestañas, con precios en MXN, duraciones y consulta personalizada. Datos ilustrativos de demostración.">
+  <meta name="theme-color" content="#F7F4EF">
+
+<link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+
+  <script src="config.js"></script>
+  <script src="contact.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body class="page-inner" data-page-title="Servicios y precios">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand__name" data-salon-name>Marfil</span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav__list"><li><a class="nav__link" href="index.html">Inicio</a></li>
+<li><a class="nav__link" href="servicios.html" aria-current="page">Servicios</a></li>
+<li><a class="nav__link" href="galeria.html">Galería</a></li>
+<li><a class="nav__link" href="nuestro-salon.html">Nuestro salón</a></li>
+<li><a class="nav__link" href="contacto.html">Contacto</a></li></ul>
+      </nav>
+
+      <a class="btn btn--primary btn--sm site-header__cta" href="contacto.html#reservas" rel="noopener" data-whatsapp>Solicitar cita</a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+        <span class="menu-toggle__label">Menú</span>
+        <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden data-menu>
+      <nav aria-label="Principal (móvil)">
+        <ul class="mobile-menu__list"><li><a class="mobile-menu__link" href="index.html">Inicio</a></li>
+<li><a class="mobile-menu__link" href="servicios.html" aria-current="page">Servicios</a></li>
+<li><a class="mobile-menu__link" href="galeria.html">Galería</a></li>
+<li><a class="mobile-menu__link" href="nuestro-salon.html">Nuestro salón</a></li>
+<li><a class="mobile-menu__link" href="contacto.html">Contacto</a></li></ul>
+      </nav>
+      <a class="btn btn--primary btn--block" href="contacto.html#reservas" rel="noopener" data-whatsapp>Solicitar cita</a>
+    </div>
+  </header>
+  <main id="contenido" tabindex="-1">
+<section class="services services--page" id="servicios" aria-labelledby="services-title" data-services>
+      <!-- Servicios y precios. Después de editar este archivo ejecuta `node build-site.js`.
+           Cada servicio es un bloque li.svc: nombre, precio, descripción, "Qué incluye", duración y
+           data-service (el nombre que va en el mensaje de WhatsApp). data-category lo conecta con su filtro y su
+           grupo; los contadores se calculan solos. En precios "desde" deja la etiqueta Desde y la nota del importe final.
+           data-featured marca los 3 servicios que aparecen en Inicio. La etiqueta "Más solicitado" es opcional.
+           Lo que está entre las marcas solo-pagina y /solo-pagina aparece solo en servicios.html. -->
+      <!-- Fondo: los utensilios de img/servicios/ (recortados de fondo-original.png) quedan en las esquinas,
+           como en la foto, y se adaptan a cualquier alto y ancho de la sección. -->
+      <div class="sv-backdrop" aria-hidden="true" data-backdrop>
+        <span class="sv-prop sv-prop--bowl" data-prop="top"><img src="img/servicios/cuenco.webp" width="292" height="297" alt="" decoding="async"></span>
+        <span class="sv-prop sv-prop--clip" data-prop="top"><img src="img/servicios/pinza.webp" width="200" height="195" alt="" decoding="async"></span>
+        <span class="sv-prop sv-prop--tray" data-prop="bottom"><img src="img/servicios/bandeja.webp" width="380" height="477" alt="" loading="lazy" decoding="async"></span>
+      </div>
+      <div class="services__inner">
+        <header class="services__header">
+          <div>
+            <p class="services__eyebrow sv-reveal">Servicios</p>
+            <h1 class="services__title" id="services-title"><span class="services__title-line"><span>Servicios</span></span> <em class="services__title-line"><span>y precios</span></em></h1>
+          </div>
+          <p class="services__lead sv-reveal" style="--d: 160ms">Explora nuestros servicios de cabello, uñas, cejas y pestañas. Consulta los detalles y elige tu próximo momento de cuidado.</p>
+        </header>
+
+        <div class="services__toolbar sv-reveal" style="--d: 220ms">
+          <div class="filters" role="group" aria-label="Filtrar servicios por categoría" data-filters>
+            <button class="filter" type="button" aria-pressed="true" data-filter="todos">Todos <span class="filter__count" data-count="todos"></span></button>
+            <button class="filter" type="button" aria-pressed="false" data-filter="cabello">Cabello <span class="filter__count" data-count="cabello"></span></button>
+            <button class="filter" type="button" aria-pressed="false" data-filter="unas">Uñas <span class="filter__count" data-count="unas"></span></button>
+            <button class="filter" type="button" aria-pressed="false" data-filter="cejas">Cejas <span class="filter__count" data-count="cejas"></span></button>
+            <button class="filter" type="button" aria-pressed="false" data-filter="pestanas">Pestañas <span class="filter__count" data-count="pestanas"></span></button>
+          </div>
+          <p class="services__status" aria-live="polite" data-services-status></p>
+        </div>
+
+        <div class="services__catalog" data-services-list>
+          <section class="svc-group" data-group="cabello" aria-labelledby="grupo-cabello">
+            <header class="svc-group__head">
+              <span class="svc-group__index" aria-hidden="true">01</span>
+              <h2 class="svc-group__title" id="grupo-cabello">Cabello</h2>
+              <p class="svc-group__desc">Cortes, color y peinados con un acabado a tu medida.</p>
+              <p class="svc-group__count" data-group-count></p>
+            </header>
+            <ul class="services__list">
+              <li class="svc" data-category="cabello" data-featured>
+                <p class="svc__category">Cabello</p>
+                <div class="svc__head">
+                  <h3 class="svc__name">Corte y estilo</h3>
+                  <span class="svc__leader" aria-hidden="true"></span>
+                  <p class="svc__price">$350 <abbr title="pesos mexicanos">MXN</abbr></p>
+                </div>
+                <div class="svc__body">
+                  <p class="svc__badge">Más solicitado</p>
+                  <p class="svc__desc">Corte con acabado y peinado sencillo.</p>
+                </div>
+                <details class="svc__more">
+                  <summary>Qué incluye<span class="disclosure-icon" aria-hidden="true"></span></summary>
+                  <ul class="svc__includes">
+                    <li>Diagnóstico de tu cabello</li>
+                    <li>Lavado y corte</li>
+                    <li>Secado y peinado sencillo</li>
+                  </ul>
+                </details>
+                <div class="svc__foot">
+                  <p class="svc__duration"><svg class="svc__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M8 4.75V8l2.25 1.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aprox. 60 min</span></p>
+                  <a class="btn btn--line btn--sm svc__cta" href="contacto.html#reservas" rel="noopener" data-service="Corte y estilo" aria-label="Elegir servicio: Corte y estilo">Elegir servicio <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+              </li>
+              <li class="svc" data-category="cabello">
+                <p class="svc__category">Cabello</p>
+                <div class="svc__head">
+                  <h3 class="svc__name">Peinado para evento</h3>
+                  <span class="svc__leader" aria-hidden="true"></span>
+                  <p class="svc__price"><span class="svc__from">Desde</span> $600 <abbr title="pesos mexicanos">MXN</abbr></p>
+                </div>
+                <div class="svc__body">
+                  <p class="svc__desc">Un acabado especial para tu próxima ocasión.</p>
+                  <p class="svc__note">El importe final depende del acabado elegido.</p>
+                </div>
+                <details class="svc__more">
+                  <summary>Qué incluye<span class="disclosure-icon" aria-hidden="true"></span></summary>
+                  <ul class="svc__includes">
+                    <li>Asesoría según tu ocasión</li>
+                    <li>Peinado suelto, semirrecogido o recogido</li>
+                    <li>Fijación para que dure todo el evento</li>
+                  </ul>
+                </details>
+                <div class="svc__foot">
+                  <p class="svc__duration"><svg class="svc__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M8 4.75V8l2.25 1.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aprox. 75 min</span></p>
+                  <a class="btn btn--line btn--sm svc__cta" href="contacto.html#reservas" rel="noopener" data-service="Peinado para evento" aria-label="Elegir servicio: Peinado para evento">Elegir servicio <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+              </li>
+              <li class="svc" data-category="cabello">
+                <p class="svc__category">Cabello</p>
+                <div class="svc__head">
+                  <h3 class="svc__name">Tinte completo</h3>
+                  <span class="svc__leader" aria-hidden="true"></span>
+                  <p class="svc__price"><span class="svc__from">Desde</span> $900 <abbr title="pesos mexicanos">MXN</abbr></p>
+                </div>
+                <div class="svc__body">
+                  <p class="svc__desc">Color uniforme de raíz a puntas, en el tono que elijas.</p>
+                  <p class="svc__note">El importe final depende del largo de tu cabello.</p>
+                </div>
+                <details class="svc__more">
+                  <summary>Qué incluye<span class="disclosure-icon" aria-hidden="true"></span></summary>
+                  <ul class="svc__includes">
+                    <li>Elección del tono contigo</li>
+                    <li>Aplicación de raíz a puntas</li>
+                    <li>Lavado y secado</li>
+                  </ul>
+                </details>
+                <div class="svc__foot">
+                  <p class="svc__duration"><svg class="svc__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M8 4.75V8l2.25 1.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aprox. 120 min</span></p>
+                  <a class="btn btn--line btn--sm svc__cta" href="contacto.html#reservas" rel="noopener" data-service="Tinte completo" aria-label="Elegir servicio: Tinte completo">Elegir servicio <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+              </li>
+              <li class="svc" data-category="cabello">
+                <p class="svc__category">Cabello</p>
+                <div class="svc__head">
+                  <h3 class="svc__name">Balayage</h3>
+                  <span class="svc__leader" aria-hidden="true"></span>
+                  <p class="svc__price"><span class="svc__from">Desde</span> $1,800 <abbr title="pesos mexicanos">MXN</abbr></p>
+                </div>
+                <div class="svc__body">
+                  <p class="svc__desc">Iluminación degradada para un efecto natural.</p>
+                  <p class="svc__note">El importe final depende del largo y la técnica.</p>
+                </div>
+                <details class="svc__more">
+                  <summary>Qué incluye<span class="disclosure-icon" aria-hidden="true"></span></summary>
+                  <ul class="svc__includes">
+                    <li>Valoración previa de tu cabello</li>
+                    <li>Aclarado y matiz</li>
+                    <li>Secado con peinado</li>
+                  </ul>
+                </details>
+                <div class="svc__foot">
+                  <p class="svc__duration"><svg class="svc__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M8 4.75V8l2.25 1.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aprox. 180 min</span></p>
+                  <a class="btn btn--line btn--sm svc__cta" href="contacto.html#reservas" rel="noopener" data-service="Balayage" aria-label="Elegir servicio: Balayage">Elegir servicio <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section class="svc-group" data-group="unas" aria-labelledby="grupo-unas">
+            <header class="svc-group__head">
+              <span class="svc-group__index" aria-hidden="true">02</span>
+              <h2 class="svc-group__title" id="grupo-unas">Uñas</h2>
+              <p class="svc-group__desc">Manos y pies cuidados, con color y diseños que duran.</p>
+              <p class="svc-group__count" data-group-count></p>
+            </header>
+            <ul class="services__list">
+              <li class="svc" data-category="unas">
+                <p class="svc__category">Uñas</p>
+                <div class="svc__head">
+                  <h3 class="svc__name">Manicure tradicional</h3>
+                  <span class="svc__leader" aria-hidden="true"></span>
+                  <p class="svc__price">$200 <abbr title="pesos mexicanos">MXN</abbr></p>
+                </div>
+                <div class="svc__body">
+                  <p class="svc__desc">Limado, cuidado de cutícula y esmaltado clásico.</p>
+                </div>
+                <details class="svc__more">
+                  <summary>Qué incluye<span class="disclosure-icon" aria-hidden="true"></span></summary>
+                  <ul class="svc__includes">
+                    <li>Limado y forma</li>
+                    <li>Cuidado de cutícula</li>
+                    <li>Esmaltado tradicional</li>
+                  </ul>
+                </details>
+                <div class="svc__foot">
+                  <p class="svc__duration"><svg class="svc__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M8 4.75V8l2.25 1.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aprox. 45 min</span></p>
+                  <a class="btn btn--line btn--sm svc__cta" href="contacto.html#reservas" rel="noopener" data-service="Manicure tradicional" aria-label="Elegir servicio: Manicure tradicional">Elegir servicio <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+              </li>
+              <li class="svc" data-category="unas" data-featured>
+                <p class="svc__category">Uñas</p>
+                <div class="svc__head">
+                  <h3 class="svc__name">Manicure con gel</h3>
+                  <span class="svc__leader" aria-hidden="true"></span>
+                  <p class="svc__price">$300 <abbr title="pesos mexicanos">MXN</abbr></p>
+                </div>
+                <div class="svc__body">
+                  <p class="svc__badge">Más solicitado</p>
+                  <p class="svc__desc">Preparación de uñas y aplicación de color en gel.</p>
+                </div>
+                <details class="svc__more">
+                  <summary>Qué incluye<span class="disclosure-icon" aria-hidden="true"></span></summary>
+                  <ul class="svc__includes">
+                    <li>Preparación de uña y cutícula</li>
+                    <li>Color en gel a elegir</li>
+                    <li>Acabado brillante y duradero</li>
+                  </ul>
+                </details>
+                <div class="svc__foot">
+                  <p class="svc__duration"><svg class="svc__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M8 4.75V8l2.25 1.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aprox. 60 min</span></p>
+                  <a class="btn btn--line btn--sm svc__cta" href="contacto.html#reservas" rel="noopener" data-service="Manicure con gel" aria-label="Elegir servicio: Manicure con gel">Elegir servicio <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+              </li>
+              <li class="svc" data-category="unas">
+                <p class="svc__category">Uñas</p>
+                <div class="svc__head">
+                  <h3 class="svc__name">Aplicación de acrílico</h3>
+                  <span class="svc__leader" aria-hidden="true"></span>
+                  <p class="svc__price"><span class="svc__from">Desde</span> $550 <abbr title="pesos mexicanos">MXN</abbr></p>
+                </div>
+                <div class="svc__body">
+                  <p class="svc__desc">Extensión con acabado y diseño a elegir.</p>
+                  <p class="svc__note">El importe final depende del diseño elegido.</p>
+                </div>
+                <details class="svc__more">
+                  <summary>Qué incluye<span class="disclosure-icon" aria-hidden="true"></span></summary>
+                  <ul class="svc__includes">
+                    <li>Preparación de la uña natural</li>
+                    <li>Extensión con el largo y la forma que elijas</li>
+                    <li>Color o diseño a elegir</li>
+                  </ul>
+                </details>
+                <div class="svc__foot">
+                  <p class="svc__duration"><svg class="svc__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M8 4.75V8l2.25 1.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aprox. 120 min</span></p>
+                  <a class="btn btn--line btn--sm svc__cta" href="contacto.html#reservas" rel="noopener" data-service="Aplicación de acrílico" aria-label="Elegir servicio: Aplicación de acrílico">Elegir servicio <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+              </li>
+              <li class="svc" data-category="unas">
+                <p class="svc__category">Uñas</p>
+                <div class="svc__head">
+                  <h3 class="svc__name">Pedicure spa</h3>
+                  <span class="svc__leader" aria-hidden="true"></span>
+                  <p class="svc__price">$450 <abbr title="pesos mexicanos">MXN</abbr></p>
+                </div>
+                <div class="svc__body">
+                  <p class="svc__desc">Cuidado de pies y uñas con acabado de color.</p>
+                </div>
+                <details class="svc__more">
+                  <summary>Qué incluye<span class="disclosure-icon" aria-hidden="true"></span></summary>
+                  <ul class="svc__includes">
+                    <li>Exfoliación e hidratación</li>
+                    <li>Cuidado de uñas y cutícula</li>
+                    <li>Color a elegir</li>
+                  </ul>
+                </details>
+                <div class="svc__foot">
+                  <p class="svc__duration"><svg class="svc__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M8 4.75V8l2.25 1.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aprox. 75 min</span></p>
+                  <a class="btn btn--line btn--sm svc__cta" href="contacto.html#reservas" rel="noopener" data-service="Pedicure spa" aria-label="Elegir servicio: Pedicure spa">Elegir servicio <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section class="svc-group" data-group="cejas" aria-labelledby="grupo-cejas">
+            <header class="svc-group__head">
+              <span class="svc-group__index" aria-hidden="true">03</span>
+              <h2 class="svc-group__title" id="grupo-cejas">Cejas</h2>
+              <p class="svc-group__desc">Forma y definición para enmarcar tu mirada.</p>
+              <p class="svc-group__count" data-group-count></p>
+            </header>
+            <ul class="services__list">
+              <li class="svc" data-category="cejas" data-featured>
+                <p class="svc__category">Cejas</p>
+                <div class="svc__head">
+                  <h3 class="svc__name">Diseño de cejas</h3>
+                  <span class="svc__leader" aria-hidden="true"></span>
+                  <p class="svc__price">$180 <abbr title="pesos mexicanos">MXN</abbr></p>
+                </div>
+                <div class="svc__body">
+                  <p class="svc__desc">Definición de la forma mediante depilación.</p>
+                </div>
+                <details class="svc__more">
+                  <summary>Qué incluye<span class="disclosure-icon" aria-hidden="true"></span></summary>
+                  <ul class="svc__includes">
+                    <li>Estudio de la forma de tu rostro</li>
+                    <li>Depilación para definir</li>
+                    <li>Acabado limpio y natural</li>
+                  </ul>
+                </details>
+                <div class="svc__foot">
+                  <p class="svc__duration"><svg class="svc__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M8 4.75V8l2.25 1.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aprox. 30 min</span></p>
+                  <a class="btn btn--line btn--sm svc__cta" href="contacto.html#reservas" rel="noopener" data-service="Diseño de cejas" aria-label="Elegir servicio: Diseño de cejas">Elegir servicio <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+              </li>
+              <li class="svc" data-category="cejas">
+                <p class="svc__category">Cejas</p>
+                <div class="svc__head">
+                  <h3 class="svc__name">Laminado de cejas</h3>
+                  <span class="svc__leader" aria-hidden="true"></span>
+                  <p class="svc__price">$450 <abbr title="pesos mexicanos">MXN</abbr></p>
+                </div>
+                <div class="svc__body">
+                  <p class="svc__desc">Cejas peinadas, ordenadas y con más cuerpo.</p>
+                </div>
+                <details class="svc__more">
+                  <summary>Qué incluye<span class="disclosure-icon" aria-hidden="true"></span></summary>
+                  <ul class="svc__includes">
+                    <li>Alisado y fijación del vello</li>
+                    <li>Diseño de la forma</li>
+                    <li>Nutrición final</li>
+                  </ul>
+                </details>
+                <div class="svc__foot">
+                  <p class="svc__duration"><svg class="svc__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M8 4.75V8l2.25 1.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aprox. 45 min</span></p>
+                  <a class="btn btn--line btn--sm svc__cta" href="contacto.html#reservas" rel="noopener" data-service="Laminado de cejas" aria-label="Elegir servicio: Laminado de cejas">Elegir servicio <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section class="svc-group" data-group="pestanas" aria-labelledby="grupo-pestanas">
+            <header class="svc-group__head">
+              <span class="svc-group__index" aria-hidden="true">04</span>
+              <h2 class="svc-group__title" id="grupo-pestanas">Pestañas</h2>
+              <p class="svc-group__desc">Realce natural o más volumen, según el efecto que buscas.</p>
+              <p class="svc-group__count" data-group-count></p>
+            </header>
+            <ul class="services__list">
+              <li class="svc" data-category="pestanas">
+                <p class="svc__category">Pestañas</p>
+                <div class="svc__head">
+                  <h3 class="svc__name">Lifting de pestañas</h3>
+                  <span class="svc__leader" aria-hidden="true"></span>
+                  <p class="svc__price">$450 <abbr title="pesos mexicanos">MXN</abbr></p>
+                </div>
+                <div class="svc__body">
+                  <p class="svc__badge">Más solicitado</p>
+                  <p class="svc__desc">Realce de la curvatura de tus pestañas naturales.</p>
+                </div>
+                <details class="svc__more">
+                  <summary>Qué incluye<span class="disclosure-icon" aria-hidden="true"></span></summary>
+                  <ul class="svc__includes">
+                    <li>Elevación desde la raíz</li>
+                    <li>Tinte para más definición</li>
+                    <li>Nutrición final</li>
+                  </ul>
+                </details>
+                <div class="svc__foot">
+                  <p class="svc__duration"><svg class="svc__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M8 4.75V8l2.25 1.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aprox. 60 min</span></p>
+                  <a class="btn btn--line btn--sm svc__cta" href="contacto.html#reservas" rel="noopener" data-service="Lifting de pestañas" aria-label="Elegir servicio: Lifting de pestañas">Elegir servicio <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+              </li>
+              <li class="svc" data-category="pestanas">
+                <p class="svc__category">Pestañas</p>
+                <div class="svc__head">
+                  <h3 class="svc__name">Extensiones pelo a pelo</h3>
+                  <span class="svc__leader" aria-hidden="true"></span>
+                  <p class="svc__price"><span class="svc__from">Desde</span> $800 <abbr title="pesos mexicanos">MXN</abbr></p>
+                </div>
+                <div class="svc__body">
+                  <p class="svc__desc">Pestañas más largas con un acabado natural.</p>
+                  <p class="svc__note">El importe final depende del volumen elegido.</p>
+                </div>
+                <details class="svc__more">
+                  <summary>Qué incluye<span class="disclosure-icon" aria-hidden="true"></span></summary>
+                  <ul class="svc__includes">
+                    <li>Elección de largo y curvatura</li>
+                    <li>Aplicación una a una</li>
+                    <li>Recomendaciones de cuidado</li>
+                  </ul>
+                </details>
+                <div class="svc__foot">
+                  <p class="svc__duration"><svg class="svc__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M8 4.75V8l2.25 1.5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aprox. 120 min</span></p>
+                  <a class="btn btn--line btn--sm svc__cta" href="contacto.html#reservas" rel="noopener" data-service="Extensiones pelo a pelo" aria-label="Elegir servicio: Extensiones pelo a pelo">Elegir servicio <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <p class="demo-note">Servicios, precios y duraciones ilustrativos para esta demostración.</p>
+        <p class="services__fineprint">Duraciones aproximadas. Precios en pesos mexicanos; te confirmamos el importe final antes de tu visita.</p>
+
+        <!-- solo-pagina -->
+        <section class="sv-block combos" aria-labelledby="combos-title">
+          <header class="sv-block__head">
+            <p class="services__eyebrow sv-reveal">Combinaciones sugeridas</p>
+            <h2 class="sv-block__title sv-reveal" id="combos-title" style="--d: 80ms">Dos servicios, <em>una sola visita.</em></h2>
+            <p class="sv-block__lead sv-reveal" style="--d: 160ms">Ideas para aprovechar tu cita. El total es la suma de cada servicio; te confirmamos disponibilidad y precio final.</p>
+          </header>
+          <ul class="combos__list">
+            <li class="combo sv-item">
+              <p class="combo__label">Uñas</p>
+              <h3 class="combo__name">Manos y pies</h3>
+              <p class="combo__items">Manicure con gel + Pedicure spa</p>
+              <dl class="combo__meta">
+                <div><dt>Duración</dt><dd>Aprox. 135 min</dd></div>
+                <div><dt>Total</dt><dd>$750 <abbr title="pesos mexicanos">MXN</abbr></dd></div>
+              </dl>
+              <a class="btn btn--line btn--sm combo__cta" href="contacto.html#reservas" rel="noopener" data-whatsapp-text="Hola, me interesa la combinación Manos y pies (Manicure con gel y Pedicure spa). ¿Podrían compartirme disponibilidad y confirmar el precio?" aria-label="Consultar combinación: Manos y pies">Consultar combinación <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </li>
+            <li class="combo sv-item">
+              <p class="combo__label">Cejas · Pestañas</p>
+              <h3 class="combo__name">Mirada definida</h3>
+              <p class="combo__items">Diseño de cejas + Lifting de pestañas</p>
+              <dl class="combo__meta">
+                <div><dt>Duración</dt><dd>Aprox. 90 min</dd></div>
+                <div><dt>Total</dt><dd>$630 <abbr title="pesos mexicanos">MXN</abbr></dd></div>
+              </dl>
+              <a class="btn btn--line btn--sm combo__cta" href="contacto.html#reservas" rel="noopener" data-whatsapp-text="Hola, me interesa la combinación Mirada definida (Diseño de cejas y Lifting de pestañas). ¿Podrían compartirme disponibilidad y confirmar el precio?" aria-label="Consultar combinación: Mirada definida">Consultar combinación <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </li>
+            <li class="combo sv-item">
+              <p class="combo__label">Cabello · Uñas</p>
+              <h3 class="combo__name">Lista para tu evento</h3>
+              <p class="combo__items">Peinado para evento + Manicure con gel</p>
+              <dl class="combo__meta">
+                <div><dt>Duración</dt><dd>Aprox. 135 min</dd></div>
+                <div><dt>Total</dt><dd><span class="svc__from">Desde</span> $900 <abbr title="pesos mexicanos">MXN</abbr></dd></div>
+              </dl>
+              <p class="svc__note">El importe final depende del acabado elegido.</p>
+              <a class="btn btn--line btn--sm combo__cta" href="contacto.html#reservas" rel="noopener" data-whatsapp-text="Hola, me interesa la combinación Lista para tu evento (Peinado para evento y Manicure con gel). ¿Podrían compartirme disponibilidad y confirmar el precio?" aria-label="Consultar combinación: Lista para tu evento">Consultar combinación <svg class="btn__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="sv-block steps" aria-labelledby="steps-title">
+          <header class="sv-block__head">
+            <p class="services__eyebrow sv-reveal">Cómo reservar</p>
+            <h2 class="sv-block__title sv-reveal" id="steps-title" style="--d: 80ms">Tu cita, <em>en tres pasos.</em></h2>
+          </header>
+          <ol class="steps__list">
+            <li class="step sv-item"><span class="step__num" aria-hidden="true">01</span><h3 class="step__title">Elige tu servicio</h3><p class="step__text">Compara precios y duraciones, y toca “Elegir servicio”.</p></li>
+            <li class="step sv-item"><span class="step__num" aria-hidden="true">02</span><h3 class="step__title">Escríbenos</h3><p class="step__text">Se abre WhatsApp con el servicio que elegiste; solo tienes que enviar el mensaje.</p></li>
+            <li class="step sv-item"><span class="step__num" aria-hidden="true">03</span><h3 class="step__title">Confirmamos tu cita</h3><p class="step__text">Te compartimos disponibilidad y el precio final. Tu cita queda lista cuando el salón la confirma.</p></li>
+          </ol>
+        </section>
+
+        <section class="sv-block faq" aria-labelledby="faq-title">
+          <header class="sv-block__head">
+            <p class="services__eyebrow sv-reveal">Preguntas frecuentes</p>
+            <h2 class="sv-block__title sv-reveal" id="faq-title" style="--d: 80ms">Antes de <em>tu visita.</em></h2>
+          </header>
+          <div class="faq__list">
+            <details class="faq__item sv-item">
+              <summary>¿Cómo sé qué servicio me conviene?<span class="disclosure-icon" aria-hidden="true"></span></summary>
+              <div class="faq__answer"><p>Escríbenos con lo que buscas y te orientamos antes de reservar. Si tienes una foto de referencia, compártela en tu mensaje.</p></div>
+            </details>
+            <details class="faq__item sv-item">
+              <summary>¿Por qué algunos precios dicen “Desde”?<span class="disclosure-icon" aria-hidden="true"></span></summary>
+              <div class="faq__answer"><p>Porque el importe final depende del diseño, el largo o el acabado que elijas. Te lo confirmamos antes de tu visita.</p></div>
+            </details>
+            <details class="faq__item sv-item">
+              <summary>¿Puedo combinar servicios en una misma visita?<span class="disclosure-icon" aria-hidden="true"></span></summary>
+              <div class="faq__answer"><p>Sí. Cuéntanos qué servicios te interesan y buscamos un horario que te permita hacerlos juntos.</p></div>
+            </details>
+            <details class="faq__item sv-item">
+              <summary>¿Cuánto dura mi cita?<span class="disclosure-icon" aria-hidden="true"></span></summary>
+              <div class="faq__answer"><p>Las duraciones son aproximadas y pueden variar según el servicio. Te confirmamos el tiempo al agendar.</p></div>
+            </details>
+          </div>
+        </section>
+        <!-- /solo-pagina -->
+
+        <aside class="services__help sv-reveal" aria-label="Ayuda para elegir">
+          <p class="services__help-text">¿Tienes dudas sobre qué servicio elegir?</p>
+          <a class="btn btn--primary" href="contacto.html#reservas" rel="noopener" data-whatsapp-text="Hola, tengo dudas sobre qué servicio elegir. ¿Podrían orientarme?">
+            <svg class="btn__wa" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.25a9.7 9.7 0 0 0-8.36 14.6L2.25 21.75l5.03-1.32A9.7 9.7 0 1 0 12 2.25Zm0 17.7a8 8 0 0 1-4.07-1.11l-.29-.17-2.99.78.8-2.91-.19-.3A8 8 0 1 1 12 19.95Zm4.4-5.98c-.24-.12-1.43-.7-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06a6.55 6.55 0 0 1-1.93-1.19 7.24 7.24 0 0 1-1.34-1.66c-.14-.24 0-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46a.88.88 0 0 0-.64.3 2.68 2.68 0 0 0-.84 2 4.66 4.66 0 0 0 .98 2.48 10.67 10.67 0 0 0 4.09 3.61c.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.43-.58 1.63-1.15.2-.56.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28Z"/></svg>
+            Consultar por WhatsApp
+          </a>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer__main">
+      <div><a class="brand" href="index.html" aria-label="Marfil · Inicio"><span class="brand__name" data-salon-name>Marfil</span></a><p>Cabello, uñas y un momento para ti.</p></div>
+      <nav aria-label="Pie de página"><ul class="footer-nav"><li><a class="footer-nav__link" href="index.html">Inicio</a></li>
+<li><a class="footer-nav__link" href="servicios.html" aria-current="page">Servicios</a></li>
+<li><a class="footer-nav__link" href="galeria.html">Galería</a></li>
+<li><a class="footer-nav__link" href="nuestro-salon.html">Nuestro salón</a></li>
+<li><a class="footer-nav__link" href="contacto.html">Contacto</a></li></ul></nav>
+      <div class="site-footer__contact"><p data-contact-address>Información por confirmar</p><a data-contact-whatsapp data-contact-prefix="WhatsApp · " aria-disabled="true">WhatsApp · Información por confirmar</a><a data-contact-phone aria-disabled="true">Teléfono · Información por confirmar</a><a data-contact-instagram data-contact-prefix="Instagram · " aria-disabled="true">Instagram · Información por confirmar</a><a data-contact-facebook data-contact-prefix="Facebook · " aria-disabled="true">Facebook · Información por confirmar</a></div>
+    </div>
+    <div class="site-footer__bottom"><span>© <span data-year>2026</span> <span data-salon-name>Marfil</span></span><span>Un espacio dedicado a ti.</span></div>
+  </footer>
+
+</body>
+</html>

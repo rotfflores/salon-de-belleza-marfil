@@ -1,0 +1,25 @@
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <span class="brand__name" data-salon-name>Marfil</span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav__list">{{desktopNav}}</ul>
+      </nav>
+
+      <a class="btn btn--primary btn--sm site-header__cta" href="contacto.html#reservas" rel="noopener" data-whatsapp>Solicitar cita</a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+        <span class="menu-toggle__label">Menú</span>
+        <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden data-menu>
+      <nav aria-label="Principal (móvil)">
+        <ul class="mobile-menu__list">{{mobileNav}}</ul>
+      </nav>
+      <a class="btn btn--primary btn--block" href="contacto.html#reservas" rel="noopener" data-whatsapp>Solicitar cita</a>
+    </div>
+  </header>
