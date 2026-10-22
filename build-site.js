@@ -43,14 +43,16 @@ const featured = serviceItems.filter(item => /^<li[^>]*\sdata-featured[\s>]/.tes
   .map(item => item.replace(/\s*<details class="svc__more">[\s\S]*?<\/details>/, '').replace(/<(\/?)h4\b/g, '<$1h3'));
 const featuredGallery = galleryItems.filter(item => /^<li[^>]*\sdata-featured[\s>]/.test(item));
 if(featured.length!==3 || featuredGallery.length!==4) throw Error('Review the featured selections after changing the catalog.');
+// Los fondos con fotos (data-backdrop) son solo de las páginas de Servicios y Galería, no de Inicio.
+const noBackdrop = html => html.replace(/\s*<!-- Fondo:[\s\S]*?-->(?=\s*<div class="(?:sv|gw)-backdrop")/, '').replace(blocks(html, '<div class="'+(html.includes('sv-backdrop') ? 'sv' : 'gw')+'-backdrop"', 'div')[0] || '\u0000', '');
 // Funciones de reemplazo: un precio como "$180" no debe leerse como "$1".
-let homeServices = services.replace('class="services"','class="services services--preview"')
+let homeServices = noBackdrop(services).replace('class="services"','class="services services--preview"')
   .replace(/\s*<!-- solo-pagina -->[\s\S]*?<!-- \/solo-pagina -->/, '')
   .replace(blocks(services, '<div class="services__toolbar', 'div')[0], '')
   .replace(blocks(services, '<div class="services__catalog"', 'div')[0], () => '<ul class="services__list" data-services-list>\n'+featured.join('\n')+'\n</ul>')
   .replace(/<aside class="services__help[\s\S]*?<\/aside>/, '<div class="section-action"><a class="btn btn--line" href="servicios.html">Ver todos los servicios <span aria-hidden="true"><svg class="icon" viewBox="0 0 16 16" focusable="false"><path d="M5 11 11 5M6.5 5H11v4.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>')
   .replace('Explora nuestros servicios de cabello, uñas, cejas y pestañas. Consulta los detalles y elige tu próximo momento de cuidado.','Tres maneras de regalarte una pausa. Descubre una selección de nuestros servicios y encuentra tu próximo momento de cuidado.');
-let homeGallery = gallery.replace('class="work-gallery"','class="work-gallery work-gallery--preview"')
+let homeGallery = noBackdrop(gallery).replace('class="work-gallery"','class="work-gallery work-gallery--preview"')
   .replace(/<div class="services__toolbar">[\s\S]*?<\/div>\s*<ul class="gallery-grid/, '<ul class="gallery-grid')
   .replace(/\s*<!-- solo-pagina -->[\s\S]*?<!-- \/solo-pagina -->/, '')
   .replace(/(<ul class="gallery-grid[^>]*>)[\s\S]*?<\/ul>/,(m, open) => open+'\n'+featuredGallery.join('\n')+'\n</ul>')

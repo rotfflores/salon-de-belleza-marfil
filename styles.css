@@ -2755,3 +2755,20 @@ a[aria-disabled="true"] { text-decoration: none; cursor: default; }
   .js .gw-light img { opacity: 1; transform: none; animation: none !important; }
   .gw-prop { transform: none; }
 }
+
+/* ==========================================================
+   Inicio: Servicios y Galería sin fondo de fotos (el fondo vive solo en sus páginas)
+   ========================================================== */
+.services--preview { padding-top: clamp(5rem, 9vw, 8.5rem); padding-bottom: clamp(4.5rem, 8vw, 7rem); }
+.work-gallery--preview {
+  --sv-ink-accent: #6F5A42;
+  --champagne-deep: inherit;
+  padding-bottom: 0;
+  background: var(--ivory);
+}
+.work-gallery--preview .work-gallery__divider { margin-top: 0; padding-inline: 0; }
+.work-gallery--preview .work-gallery__divider::before,
+.work-gallery--preview .work-gallery__divider::after { background: var(--sand); }
+@media (max-width: 959px) {
+  .services--preview { padding-top: clamp(5rem, 9vw, 8.5rem); }
+}
